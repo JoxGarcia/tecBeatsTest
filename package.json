@@ -8,7 +8,10 @@
     "test-electron-headless": "npx cypress run",
     "test-electron": "npx cypress run --headed",
     "test-chrome": "npx cypress run --headed --browser chrome",
-    "test-chrome-headless": "npx cypress run --browser chrome"
+    "test-chrome-headless": "npx cypress run --browser chrome",
+    "merge": "npx mochawesome-merge .\\cypress\\results\\json\\*.json -o cypress\\results\\report.json",
+    "marge": "npx marge cypress\\results\\report.json -f report -o cypress\\results\\html",
+    "generate-report": "npx cypress run && npm run merge && npm run marge"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,15 @@
   "license": "ISC",
   "homepage": "https://github.com/JoxGarcia/tecBeatsTest.git#readme",
   "devDependencies": {
-    "cypress": "8.0.0",
+    "cypress": "9.1.1",
     "cypress-xpath": "^1.6.2"
+  },
+  "dependencies": {
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.1.3",
+    "mocha-multi-reporters": "^1.5.1",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1"
   }
 }

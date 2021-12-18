@@ -12,5 +12,9 @@
   "chromeWebSecurity": false,
   "waitForAnimations": true,
   "numTestsKeptInMemory": 10,
-  "trashAssetsBeforeRuns": true
+  "trashAssetsBeforeRuns": true,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporterOpts.json"
+  }
 }
