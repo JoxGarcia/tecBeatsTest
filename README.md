@@ -73,3 +73,18 @@ Opens the Cypress Test Runner in interactive mode.
     .
 }
 ```
+
+
+- How I run test in another browser ?
+  
+  In Packagge.json, there are commands to take as a reference if you want to run the tests in other browsers, take into account that these must be installed in the environment. Take into account that there is a limit of browsers to be used, which can be found at the following link: [Browsers Support](https://docs.cypress.io/guides/guides/launching-browsers#Browsers)
+
+```sh
+{
+    "test-chrome": "npx cypress run --headed --browser chrome",
+    "test-chrome-headless": "npx cypress run --browser chrome",
+    .
+    .
+    .
+}
+```
