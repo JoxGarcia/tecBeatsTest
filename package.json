@@ -1,0 +1,20 @@
+{
+  "name": "teacbeat-test",
+  "version": "1.0.0",
+  "description": "Test Suite for teacbeat-test",
+  "main": "index.js",
+  "scripts": {
+    "open": ".\\node_modules\\.bin\\cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:JoxGarcia/tecBeatsTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/JoxGarcia/tecBeatsTest.git#readme",
+  "devDependencies": {
+    "cypress": "8.0.0",
+    "cypress-xpath": "^1.6.2"
+  }
+}
