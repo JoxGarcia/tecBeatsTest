@@ -1,0 +1,19 @@
+{
+  "data": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "firstName": "Jose",
+    "lastName": "Garcia",
+    "postalCode": "01015"
+  },
+  "item": {
+    "object": "backpack",
+    "price": "$29.99",
+    "qty": "1"
+  },
+  "item_2": {
+    "object": "onesie",
+    "price": "$7.99",
+    "qty": "1"
+  }
+}

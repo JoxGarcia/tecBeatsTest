@@ -2,51 +2,35 @@
 
 import { actions } from "../support/POM/saucedemoActions";
 
+const dataFixture = require("../fixtures/dataFixture.json");
+const { data, item, item_2 } = dataFixture;
+
+
 describe("The Home Page", () => {
-  let data = {
-    username: "standard_user",
-    password: "secret_sauce",
-    firstName: "Jose",
-    lastName: "Garcia",
-    postalCode: "01015",
-  };
+
   beforeEach("Login to page", () => {
     cy.visit("/");
     actions.login(data);
   });
 
   it("Buying 1 backpack item", () => {
-    let item = {
-      object: "backpack",
-      price: "$29.99",
-      qty: "1"
-    };
-
     actions.addToCart(item.object);
+    actions.checkCartValue(item.qty);
     actions.clickOnShoppingCart();
+    actions.checkCart(item);
     actions.clickOnCheckout();
     actions.fillCheckoutInformation(data);
     actions.checkoutOverview(item);
     actions.checkItemTotal("$29.99");
-
   });
 
-  it("Buying 2 items", () => {
-    let item = {
-      object: "backpack",
-      price: "$29.99",
-      qty: "1",
-    };
-
-    let item_2 = {
-      object: "onesie",
-      price: "$7.99",
-      qty: "1",
-    };
-
+  it("Buying 2 items, backpack and onesie", () => {
     actions.addToCart(item.object);
     actions.addToCart(item_2.object);
+    actions.checkCartValue("2");
     actions.clickOnShoppingCart();
+    actions.checkCart(item);
+    actions.checkCart(item_2);
     actions.clickOnCheckout();
     actions.fillCheckoutInformation(data);
     actions.checkoutOverview(item);

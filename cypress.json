@@ -13,5 +13,4 @@
   "waitForAnimations": true,
   "numTestsKeptInMemory": 10,
   "trashAssetsBeforeRuns": true
-
 }

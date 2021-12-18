@@ -4,7 +4,11 @@
   "description": "Test Suite for teacbeat-test",
   "main": "index.js",
   "scripts": {
-    "open": ".\\node_modules\\.bin\\cypress open"
+    "open": ".\\node_modules\\.bin\\cypress open",
+    "test-electron-headless": "npx cypress run",
+    "test-electron": "npx cypress run --headed",
+    "test-chrome": "npx cypress run --headed --browser chrome",
+    "test-chrome-headless": "npx cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
