@@ -1,5 +1,27 @@
 # Set Cypress.io Test Enviroment
 
+### NOTE
+
+As a note, this project was set in the Windows operating system, therefore, the commands, which have paths, vary and this can affect.
+
+For Example:
+
+WINDOWS:
+
+```sh
+{
+    "open": ".\\node_modules\\.bin\\cypress open",
+}
+```
+
+MAC:
+
+```sh
+{
+    "open": "./node_modules/.bin/cypress open",
+}
+```
+
 ### Installation
 
 Prerequisites for any OS:
@@ -54,7 +76,7 @@ More info about [Cypress](https://docs.cypress.io/guides/overview/why-cypress.ht
 
 ### Scripts
 
-* open 
+- open
 
 Opens the Cypress Test Runner in interactive mode.
 
@@ -74,9 +96,8 @@ Opens the Cypress Test Runner in interactive mode.
 }
 ```
 
-
 - How I run test in another browser ?
-  
+
   In Packagge.json, there are commands to take as a reference if you want to run the tests in other browsers, take into account that these must be installed in the environment. Take into account that there is a limit of browsers to be used, which can be found at the following link: [Browsers Support](https://docs.cypress.io/guides/guides/launching-browsers#Browsers)
 
 ```sh
