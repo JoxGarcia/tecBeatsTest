@@ -109,3 +109,13 @@ Opens the Cypress Test Runner in interactive mode.
     .
 }
 ```
+
+### Report
+
+To watch the report, run the tests or run the command `npm run generate-report`, then open the file tecBeatsTest\cypress\results\html\report.html.
+It should look like this: 
+
+![report](https://user-images.githubusercontent.com/74571206/146660093-ab869c98-b402-4fd2-a294-9e07c14b3946.PNG)
+
+
+
