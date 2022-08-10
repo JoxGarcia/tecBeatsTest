@@ -21,7 +21,7 @@ describe("The Home Page", () => {
     actions.clickOnCheckout();
     actions.fillCheckoutInformation(data);
     actions.checkoutOverview(item);
-    actions.checkItemTotal("$29.99");
+    actions.checkItemTotal("$28.99");
   });
 
   it("Buying 2 items, backpack and onesie", () => {
